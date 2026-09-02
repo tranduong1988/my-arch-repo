@@ -1,5 +1,4 @@
 #####
 # AUR packages
-vscodium
-vscodium-bin-marketplace
+miktex
 brave-origin-bin
