@@ -77,7 +77,7 @@ jobs:
           pacman -U --noconfirm /tmp/paru/paru-*.pkg.tar.zst
           rm /tmp/paru/paru-*.pkg.tar.zst
           pacman -Rns --noconfirm rust
-          pacman -Rns --noconfirm $(pacman -Qtdq)
+
       #- name: Configure makepkg for x86-64-v3 optimization
       #  run: |
       #    set -euo pipefail
