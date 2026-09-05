@@ -1,0 +1,3 @@
+[asusctl]
+source = "git"
+git = "https://github.com/OpenGamingCollective/asusctl.git"
