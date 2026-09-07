@@ -27,7 +27,7 @@ Append the following configuration to the bottom of your `/etc/pacman.conf`:
 ```ini
 [nanoka]
 SigLevel = Optional TrustAll
-Server = https://github.com/nhktmdzhg/my-arch-repo/releases/download/repository
+Server = https://github.com/tranduong1988/my-arch-repo/releases/download/repository
 ```
 
 ### 3. Sync and Install
@@ -145,7 +145,7 @@ Thêm đoạn cấu hình sau vào cuối file `/etc/pacman.conf`:
 ```ini
 [nanoka]
 SigLevel = Optional TrustAll
-Server = https://github.com/nhktmdzhg/my-arch-repo/releases/download/repository
+Server = https://github.com/tranduong1988/my-arch-repo/releases/download/repository
 ```
 
 #### 3. Đồng bộ và cài đặt

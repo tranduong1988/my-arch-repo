@@ -1,0 +1,14 @@
+pkgbase = nvidia-laptop-power-cfg
+	pkgdesc = nvidia-specific configuration for power management
+	pkgver = 0.0.6
+	pkgrel = 1
+	arch = any
+	license = MIT
+	backup = etc/modprobe.d/nvidia.conf
+	backup = usr/lib/udev/rules.d/80-nvidia-pm.rules
+	source = nvidia.conf
+	source = nvidia.rules
+	sha256sums = 9aee069b6557663b366520f851772f0f0bb27906869fcc04e431395dab2915bc
+	sha256sums = 181ede9344d41b59a928aa7134938646ec45468b93075a3ff7249d6a065c2170
+
+pkgname = nvidia-laptop-power-cfg

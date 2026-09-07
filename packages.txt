@@ -10,3 +10,7 @@ asusctl
 python-imageio-ffmpeg
 python-screeninfo
 waypaper
+
+#####
+# Local packages
+local:nvidia-laptop-power-cfg
