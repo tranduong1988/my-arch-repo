@@ -1,6 +1,7 @@
 #####
 # AUR packages
-miktexhook
+miktex
+pacman
 paru
 grub-hook
 brave-origin-bin
