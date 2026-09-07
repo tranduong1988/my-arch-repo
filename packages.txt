@@ -1,3 +1,11 @@
 #####
 # AUR packages
-miktex
+miktexhook
+paru
+grub-hook
+brave-origin-bin
+downgrade
+asusctl
+python-imageio-ffmpeg
+python-screeninfo
+waypaper
