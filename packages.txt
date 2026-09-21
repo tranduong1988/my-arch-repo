@@ -10,6 +10,8 @@ asusctl
 python-imageio-ffmpeg
 python-screeninfo
 waypaper
+vscodium
+vscodium-marketplace
 
 #####
 # Local packages
