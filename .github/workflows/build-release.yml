@@ -71,6 +71,8 @@ jobs:
           pacman-key --populate archlinux cachyos
           pacman -Sy --noconfirm archlinux-keyring cachyos-keyring
           pacman-key --populate archlinux cachyos
+          cachyos-rate-mirrors
+          pacman -Syyu
           
           pacman -Syu --noconfirm --needed git subversion mercurial sudo rsync github-cli fakeroot binutils pacman-contrib paru curl awk tar jq
           id builder >/dev/null 2>&1 || useradd -m builder
