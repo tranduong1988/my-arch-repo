@@ -12,6 +12,7 @@ python-screeninfo
 waypaper
 vscodium
 vscodium-marketplace
+shim-signed
 
 #####
 # Local packages
