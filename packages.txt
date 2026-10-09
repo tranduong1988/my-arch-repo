@@ -17,3 +17,4 @@ shim-signed
 #####
 # Local packages
 local:nvidia-laptop-power-cfg
+local:linux-dt
