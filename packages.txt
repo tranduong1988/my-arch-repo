@@ -12,6 +12,7 @@ waypaper
 vscodium
 vscodium-marketplace
 shim-signed
+nvidia-utils
 
 #####
 # Local packages
