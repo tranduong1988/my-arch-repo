@@ -56,7 +56,7 @@ jobs:
     needs: prepare
     runs-on: ubuntu-latest
     container:
-      image: cachyos/cachyos-v3
+      image: ghcr.io/tranduong1988/cachyos-v3:latest
     strategy:
       fail-fast: false
       matrix:
