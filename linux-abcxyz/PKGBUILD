@@ -174,7 +174,7 @@ else
     _pkgsuffix=cachyos
 fi
 
-pkgbase="linux-dt"
+pkgbase="linux-abcxyz"
 _major=7.2
 _minor=9
 #_minorc=$((_minor+1))

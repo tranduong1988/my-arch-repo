@@ -1,4 +1,4 @@
-pkgbase = linux-dt
+pkgbase = linux-abcxyz
 	pkgdesc = Linux EEVDF + LTO + AutoFDO + Propeller Cachy Sauce Kernel by CachyOS with other patches and improvements.
 	pkgver = 7.2.9
 	pkgrel = 2
@@ -49,7 +49,7 @@ pkgbase = linux-dt
 	b2sums = 870fcd01ea0b3a2bc11fe43b2333f30add0067e5f77ee820f771f8e95a0b4e9ba2f7d822e5337d0c51f4a34c843f76b2148c853614e68a024393073fff7d99da
 	b2sums = SKIP
 
-pkgname = linux-dt
+pkgname = linux-abcxyz
 	pkgdesc = The Linux EEVDF + LTO + AutoFDO + Propeller Cachy Sauce Kernel by CachyOS with other patches and improvements. kernel and modules
 	depends = coreutils
 	depends = kmod
@@ -68,7 +68,7 @@ pkgname = linux-dt
 	provides = linux-cachyos-lto=7.2.9-2
 	replaces = linux-cachyos-lto
 
-pkgname = linux-dt-headers
+pkgname = linux-abcxyz-headers
 	pkgdesc = Headers and scripts for building modules for the Linux EEVDF + LTO + AutoFDO + Propeller Cachy Sauce Kernel by CachyOS with other patches and improvements. kernel
 	depends = binutils
 	depends = glibc
@@ -79,7 +79,7 @@ pkgname = linux-dt-headers
 	depends = xxhash
 	depends = zlib
 	depends = zstd
-	depends = linux-dt
+	depends = linux-abcxyz
 	depends = clang
 	depends = llvm
 	depends = lld
@@ -87,16 +87,16 @@ pkgname = linux-dt-headers
 	provides = linux-cachyos-lto-headers=7.2.9-2
 	replaces = linux-cachyos-lto-headers
 
-pkgname = linux-dt-nvidia-open
-	pkgdesc = nvidia open modules of 615.78.08 driver for the linux-dt kernel
+pkgname = linux-abcxyz-nvidia-open
+	pkgdesc = nvidia open modules of 615.78.08 driver for the linux-abcxyz kernel
 	license = MIT AND GPL-2.0-only
-	depends = linux-dt=7.2.9-2
+	depends = linux-abcxyz=7.2.9-2
 	depends = nvidia-utils=615.78.08
 	depends = libglvnd
 	provides = NVIDIA-MODULE
-	conflicts = linux-dt-nvidia
+	conflicts = linux-abcxyz-nvidia
 
-pkgname = linux-dt-r8125
-	pkgdesc = r8125 modules for the linux-dt kernel
+pkgname = linux-abcxyz-r8125
+	pkgdesc = r8125 modules for the linux-abcxyz kernel
 	license = GPL-2.0-only
-	depends = linux-dt=7.2.9-2
+	depends = linux-abcxyz=7.2.9-2
