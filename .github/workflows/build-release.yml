@@ -176,6 +176,9 @@ jobs:
           if [[ "$NEEDS_BUILD" == "false" ]]; then
             echo "$PKG" > output/status-skipped-$PKG.txt
           else
+            if [[ "$PKG" == "pacman" || "$PKG" == "paru" ]]; then
+                pacman -Syu --noconfirm --needed rust
+            fi
             echo "Building $PKG with paru"
             ASSUME_PKGS=$(sudo -u builder bash -lc "cd '$GITHUB_WORKSPACE/$PKG' && source PKGBUILD && echo \${pkgname[@]}")
             ASSUME_ARGS=""
