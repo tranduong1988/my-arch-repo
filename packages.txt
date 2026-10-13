@@ -6,6 +6,7 @@ paru
 grub-hook
 brave-origin-bin
 downgrade
+localsend
 python-imageio-ffmpeg
 python-screeninfo
 waypaper
