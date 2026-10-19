@@ -56,21 +56,16 @@ jobs:
     needs: prepare
     runs-on: ubuntu-latest
     container:
-      image: ghcr.io/tranduong1988/cachyos-v3:latest
+      image: cachyos/cachyos-v3
     strategy:
       fail-fast: false
       matrix:
         package: ${{ fromJson(needs.prepare.outputs.matrix) }}
     steps:
       - name: Install base dependencies
-        env:
-          PKG: ${{ matrix.package }}
         run: |
           set -euo pipefail
-          pacman -Syu --noconfirm --needed git subversion mercurial sudo rsync github-cli fakeroot binutils pacman-contrib paru curl awk tar jq
-          if [[ "$PKG" == "pacman" || "$PKG" == "paru" ]]; then
-              pacman -Syu --noconfirm --needed rust
-          fi
+          pacman -Syu --noconfirm --needed git subversion mercurial sudo rsync github-cli fakeroot binutils pacman-contrib paru curl awk tar jq rust
           id builder >/dev/null 2>&1 || useradd -m builder
           grep -q '^builder ALL=(ALL) NOPASSWD: ALL$' /etc/sudoers || echo "builder ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 
@@ -137,6 +132,11 @@ jobs:
             echo "::warning::No ${REPO_DB_NAME}.files.tar.gz asset in release '$RELEASE_TAG'; every package will be treated as needing a rebuild."
           fi
 
+          echo "Updating checksums for $PKG..."
+          if ! sudo -u builder bash -lc "cd '$GITHUB_WORKSPACE/$PKG' && updpkgsums"; then
+            echo "::warning::updpkgsums failed for $PKG; proceeding with existing checksums."
+          fi
+
           echo "Checking status for $PKG"
           VCS_PREPASS_OK=true
           if grep -q 'pkgver()' "$PKG/PKGBUILD"; then
@@ -188,10 +188,6 @@ jobs:
               ASSUME_ARGS="$ASSUME_ARGS --assume-installed $subpkg"
             done
             PARU_FLAGS="--noconfirm --skipreview --useask --removemake --nocheck -B$ASSUME_ARGS"
-            if [[ "$PKG" == "pacman" ]]; then
-              echo "Package is pacman: adding --skipinteg to makepkg arguments"
-              PARU_FLAGS="$PARU_FLAGS --mflags --skipinteg"
-            fi
             if ! sudo -u builder bash -lc "cd '$GITHUB_WORKSPACE/$PKG' && paru $PARU_FLAGS '$GITHUB_WORKSPACE/$PKG'"; then
               echo "::warning::paru exited non-zero for $PKG; checking whether package files were produced anyway."
             fi
