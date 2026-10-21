@@ -1,6 +1,6 @@
 # 📦 Personal Arch Linux Repository Builder
 
-[Xem bản tiếng Việt](#-hướng-dẫn-tiếng-việt)
+[Xem bản tiếng Việt](#hướng-dẫn-tiếng-việt)
 
 A fully automated, zero-cost Arch Linux binary repository powered entirely by GitHub Actions and GitHub Releases.
 
