@@ -1,6 +1,6 @@
 # 📦 Personal Arch Linux Repository Builder
 
-[🇻🇳 Xem bản tiếng Việt](#-hướng-dẫn-tiếng-việt)
+[Xem bản tiếng Việt](#-hướng-dẫn-tiếng-việt)
 
 A fully automated, zero-cost Arch Linux binary repository powered entirely by GitHub Actions and GitHub Releases.
 
@@ -120,7 +120,7 @@ The entire repository is controlled by a single file: `packages.txt`.
 
 ---
 
-## 🇻🇳 Hướng dẫn tiếng Việt
+## Hướng dẫn tiếng Việt
 
 Kho gói nhị phân Arch Linux cá nhân này được tự động hóa hoàn toàn, không tốn chi phí máy chủ riêng, và hoạt động bằng GitHub Actions kết hợp GitHub Releases.
 
