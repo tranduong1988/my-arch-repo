@@ -20,7 +20,7 @@ concurrency:
 
 env:
   RELEASE_TAG: repository
-  REPO_DB_NAME: abcxyz
+  REPO_DB_NAME: xmonad
 
 jobs:
   prepare:
