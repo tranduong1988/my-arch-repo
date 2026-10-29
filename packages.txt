@@ -13,7 +13,9 @@ waypaper
 vscodium
 vscodium-marketplace
 shim-signed
+nvidia-utils
 
 #####
 # Local packages
 local:nvidia-laptop-power-cfg
+local:linux-xmonad

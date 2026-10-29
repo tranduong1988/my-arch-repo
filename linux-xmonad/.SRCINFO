@@ -1,0 +1,108 @@
+pkgbase = linux-xmonad
+	pkgdesc = Linux EEVDF + LTO + AutoFDO + Propeller Cachy Sauce Kernel by CachyOS with other patches and improvements.
+	pkgver = 7.3.0
+	pkgrel = 4
+	url = https://github.com/CachyOS/linux-cachyos
+	arch = x86_64
+	license = GPL-2.0-only
+	makedepends = bc
+	makedepends = binutils
+	makedepends = cpio
+	makedepends = gettext
+	makedepends = glibc
+	makedepends = libelf
+	makedepends = libgcc
+	makedepends = openssl
+	makedepends = pahole
+	makedepends = perl
+	makedepends = python
+	makedepends = rust
+	makedepends = rust-bindgen
+	makedepends = rust-src
+	makedepends = tar
+	makedepends = xxhash
+	makedepends = xz
+	makedepends = zlib
+	makedepends = zstd
+	makedepends = clang
+	makedepends = llvm
+	makedepends = lld
+	makedepends = git
+	options = !strip
+	options = !debug
+	options = !lto
+	source = https://github.com/CachyOS/linux/releases/download/cachyos-7.3.0-4/cachyos-7.3.0-4.tar.gz
+	source = https://github.com/CachyOS/linux/releases/download/cachyos-7.3.0-4/cachyos-7.3.0-4.tar.gz.asc
+	source = config
+	source = https://raw.githubusercontent.com/cachyos/kernel-patches/master/7.3/misc/dkms-clang.patch
+	source = git+https://github.com/cachyos/zfs.git#commit=fb48c76e17d3e0092fbba430a9eec1960e1b9961
+	source = https://download.nvidia.com/XFree86/NVIDIA-kernel-module-source/NVIDIA-kernel-module-source-615.78.08.tar.xz
+	source = https://raw.githubusercontent.com/cachyos/kernel-patches/master/7.3/misc/nvidia/0001-fix-dsc-correct-RC-parameter-tables-to-match-VESA-DS.patch
+	source = https://raw.githubusercontent.com/cachyos/kernel-patches/master/7.3/misc/nvidia/0002-fix-dp-add-Bigscreen-Beyond-VR-headset-to-WAR-databa.patch
+	source = https://raw.githubusercontent.com/cachyos/kernel-patches/master/7.3/misc/nvidia/0004-Open-sysfs-config-from-the-userspace-root-on-7.3.patch
+	source = git+https://github.com/aravance/r8125.git
+	validpgpkeys = E18447AC260021D31F3FF6C4C8A2A4774B8B63C4
+	validpgpkeys = E8B9AA39F054E30E8290D492C3C4820857F654FE
+	b2sums = d90b9a609d930cf596022050014ef75e11f3b9378fb51be7763743bc15b10d31caa8d48c59149ed2aea28853aae1ec6d7e68a8ce441b1bd014c9897cbeb8dba5
+	b2sums = SKIP
+	b2sums = e21485bd3d917be15837eb51ddb9aeb4a0df5fb7b18ccbf1d520aff2340833935e441f634e4ae8482a21ff38a9dec9f320bec3459aedf15087909b6eb2cff7db
+	b2sums = c992567bd7dd8553432be496ffa1c17e2f5ebe9c7edb51945cf977e1b742dd6517c210d8843bb82744ca705efd07f8027cd7dde41b50215ebd707a34aa81462e
+
+pkgname = linux-xmonad
+	pkgdesc = The Linux EEVDF + LTO + AutoFDO + Propeller Cachy Sauce Kernel by CachyOS with other patches and improvements. kernel and modules
+	depends = coreutils
+	depends = kmod
+	depends = initramfs
+	optdepends = wireless-regdb: to set the correct wireless channels of your country
+	optdepends = linux-firmware: firmware images needed for some devices
+	optdepends = modprobed-db: Keeps track of EVERY kernel module that has ever been probed - useful for those of us who make localmodconfig
+	optdepends = scx-scheds: to use sched-ext schedulers
+	provides = VIRTUALBOX-GUEST-MODULES
+	provides = WIREGUARD-MODULE
+	provides = KSMBD-MODULE
+	provides = V4L2LOOPBACK-MODULE
+	provides = NTSYNC-MODULE
+	provides = VHBA-MODULE
+	provides = ADIOS-MODULE
+	provides = linux-cachyos-lto=7.3.0-4
+	replaces = linux-cachyos-lto
+
+pkgname = linux-xmonad-headers
+	pkgdesc = Headers and scripts for building modules for the Linux EEVDF + LTO + AutoFDO + Propeller Cachy Sauce Kernel by CachyOS with other patches and improvements. kernel
+	depends = binutils
+	depends = glibc
+	depends = libelf
+	depends = libgcc
+	depends = openssl
+	depends = pahole
+	depends = xxhash
+	depends = zlib
+	depends = zstd
+	depends = linux-xmonad
+	depends = clang
+	depends = llvm
+	depends = lld
+	provides = LINUX-HEADERS
+	provides = linux-cachyos-lto-headers=7.3.0-4
+	replaces = linux-cachyos-lto-headers
+
+pkgname = linux-xmonad-zfs
+	pkgdesc = zfs module for the Linux EEVDF + LTO + AutoFDO + Propeller Cachy Sauce Kernel by CachyOS with other patches and improvements. kernel
+	license = CDDL
+	depends = pahole
+	depends = linux-xmonad=7.3.0-4
+	provides = ZFS-MODULE
+
+pkgname = linux-xmonad-nvidia-open
+	pkgdesc = nvidia open modules of 615.78.08 driver for the linux-xmonad kernel
+	license = MIT AND GPL-2.0-only
+	depends = linux-xmonad=7.3.0-4
+	depends = nvidia-utils=615.78.08
+	depends = libglvnd
+	provides = NVIDIA-MODULE
+	conflicts = linux-xmonad-nvidia
+
+pkgname = linux-xmonad-r8125
+	pkgdesc = r8125 modules for the linux-xmonad kernel
+	license = GPL-2.0-only
+	depends = linux-xmonad=7.3.0-4
