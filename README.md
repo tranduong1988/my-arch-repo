@@ -1,6 +1,6 @@
 # 📦 Personal Arch Linux Repository Builder
 
-[Xem bản tiếng Việt](#hướng-dẫn-tiếng-việt)
+[🇻🇳 Xem bản tiếng Việt](#-hướng-dẫn-tiếng-việt)
 
 A fully automated, zero-cost Arch Linux binary repository powered entirely by GitHub Actions and GitHub Releases.
 
@@ -27,7 +27,7 @@ Append the following configuration to the bottom of your `/etc/pacman.conf`:
 ```ini
 [xmonad]
 SigLevel = Optional TrustAll
-Server = https://github.com/tranduong1988/my-arch-repo/releases/download/repository
+Server = https://github.com/nhktmdzhg/my-arch-repo/releases/download/repository
 ```
 
 ### 3. Sync and Install
@@ -120,7 +120,7 @@ The entire repository is controlled by a single file: `packages.txt`.
 
 ---
 
-## Hướng dẫn tiếng Việt
+## 🇻🇳 Hướng dẫn tiếng Việt
 
 Kho gói nhị phân Arch Linux cá nhân này được tự động hóa hoàn toàn, không tốn chi phí máy chủ riêng, và hoạt động bằng GitHub Actions kết hợp GitHub Releases.
 
@@ -145,7 +145,7 @@ Thêm đoạn cấu hình sau vào cuối file `/etc/pacman.conf`:
 ```ini
 [xmonad]
 SigLevel = Optional TrustAll
-Server = https://github.com/tranduong1988/my-arch-repo/releases/download/repository
+Server = https://github.com/nhktmdzhg/my-arch-repo/releases/download/repository
 ```
 
 #### 3. Đồng bộ và cài đặt
