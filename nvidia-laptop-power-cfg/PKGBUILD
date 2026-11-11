@@ -1,0 +1,33 @@
+# Maintainer: Denis Benato <benato.denis96@gmail.com>
+
+pkgname=nvidia-laptop-power-cfg
+pkgver=0.0.6
+pkgrel=1
+pkgdesc="nvidia-specific configuration for power management"
+arch=('any')
+license=('MIT')
+
+# see https://download.nvidia.com/XFree86/Linux-x86_64/580.82.09/README/dynamicpowermanagement.html
+
+backup=(
+    'etc/modprobe.d/nvidia.conf'
+    'usr/lib/udev/rules.d/80-nvidia-pm.rules'
+)
+
+source=(
+    "nvidia.conf"
+    "nvidia.rules"
+)
+
+sha256sums=(
+    '9aee069b6557663b366520f851772f0f0bb27906869fcc04e431395dab2915bc' # nvidia.conf
+    'f1d3aba2f9a673b599a127cb1c86d1fb19403e91d445d03e7eaa88c33225b984' # nvidia.rules
+)
+
+package() {
+    mkdir -p "$pkgdir/etc/modprobe.d/"
+    mkdir -p "$pkgdir/usr/lib/udev/rules.d/"
+
+    install -m 644 "$srcdir/nvidia.conf" "$pkgdir/etc/modprobe.d/nvidia.conf"
+    install -m 644 "$srcdir/nvidia.rules" "$pkgdir/usr/lib/udev/rules.d/80-nvidia-pm.rules"
+}
