@@ -1,5 +1,6 @@
 #####
 # AUR packages
+awesome-luajit-git
 miktex
 pacman
 paru
