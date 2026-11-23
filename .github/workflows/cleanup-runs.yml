@@ -17,5 +17,5 @@ jobs:
         with:
           token: ${{ github.token }}
           repository: ${{ github.repository }}
-          retain_days: 7               # Retain workflow runs from the last 7 days
+          retain_days: 5               # Retain workflow runs from the last 5 days
           keep_minimum_runs: 5         # Always keep at least the 5 most recent runs of each workflow
