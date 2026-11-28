@@ -15,6 +15,7 @@ vscodium
 vscodium-marketplace
 shim-signed
 nvidia-utils
+cardwire
 
 #####
 # Local packages
